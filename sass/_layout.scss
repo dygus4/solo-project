@@ -1,0 +1,47 @@
+.row {
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    font-family: $font-header;
+  }
+
+
+.sidebar {
+  background-color: $black-color;
+  
+  color: $red-color;
+}
+.name ul {
+    font-size: 20px;
+    padding-left: 15px;
+    list-style-type: none;
+    color: $white-color;
+    display: inline-flex;
+}
+.name li { 
+    display: inline;
+    padding-right: 0px;
+    margin-right: 0px;
+}
+.name i {
+   
+    margin-right: 12px;
+}
+
+.menu ul {
+    list-style-type: none;
+}
+.menu li{
+    padding: 10px;
+}
+.menu a {
+    color: $white-color;
+    text-decoration: none;
+    padding-left: 10px;
+}
+.menu i {
+    padding-right: 10px;
+    
+}
+
+
