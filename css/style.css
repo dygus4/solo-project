@@ -388,8 +388,42 @@ template {
   border: 5px solid orange;
 }
 
+/*General static*/
 .general-statistic {
   border: 5px solid blue;
+}
+
+.general-statistic h2 {
+  padding: 20px;
+}
+
+.date {
+  display: flex;
+  justify-content: center;
+  margin: 15px;
+}
+
+.date p {
+  padding: 10px 20px;
+  margin: 0;
+  border: 1px solid black;
+}
+
+.date a:last-of-type {
+  padding: 10px;
+  color: white;
+  background-color: black;
+}
+
+.statistic {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.chart img {
+  display: block;
+  margin: 0 auto;
 }
 
 .links {
