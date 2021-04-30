@@ -340,7 +340,7 @@ template {
   display: none;
 }
 
-.container {
+.row {
   margin: 0px;
   padding: 0px;
   font-family: "Roboto Condensed", sans-serif;
@@ -349,16 +349,36 @@ template {
   width: 100%;
 }
 
+.manager {
+  padding: 20px;
+}
+
+.manager h3 {
+  color: white;
+}
+
+.manager a {
+  text-decoration: none;
+  color: white;
+}
+
+.manager img {
+  height: 25px;
+  padding-right: 10px;
+}
+
+.col {
+  float: left;
+}
+
 .sidebar {
   width: fit-content;
   background-color: #333333;
   height: 100vh;
   color: #FF0000;
-  flex: 1;
 }
 
 .content {
-  flex: 4;
   border: 5px solid black;
   margin: 0;
   padding: 0;
@@ -378,6 +398,8 @@ template {
 
 .top-menu {
   border: 5px solid green;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .top-menu i, .top-menu span {

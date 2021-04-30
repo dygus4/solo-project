@@ -1,4 +1,4 @@
-.container {
+.row {
     
     margin: 0px;
     padding: 0px;
@@ -6,19 +6,38 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-  }
+}
+.manager {
+    padding: 20px;
 
+    h3 {
+        color: $white-color;
+    }
 
+    a {
+        text-decoration: none;
+        color: $white-color;
+    }
+
+    img {
+        height: 25px;
+        padding-right: 10px;
+    }
+}
+
+.col {
+    float: left;
+}
 .sidebar {
   width: fit-content;
   background-color: $black-color;
   height: 100vh;
   color: $red-color;
-  flex: 1;
+  
   
 }
 .content {
-    flex: 4;
+    
     border: 5px solid black;
     margin: 0;
     padding: 0;
@@ -35,6 +54,8 @@
 
 .top-menu {
     border: 5px solid green;
+    display: flex;
+    justify-content: flex-end;
     
     i, span {
         padding: 10px;
