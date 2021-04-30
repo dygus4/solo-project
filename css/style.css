@@ -340,33 +340,70 @@ template {
   display: none;
 }
 
-.row {
-  height: 100vh;
+.container {
   margin: 0px;
   padding: 0px;
   font-family: "Roboto Condensed", sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .sidebar {
+  width: fit-content;
   background-color: #333333;
+  height: 100vh;
   color: #FF0000;
+  flex: 1;
+}
+
+.content {
+  flex: 4;
+  border: 5px solid black;
+  margin: 0;
+  padding: 0;
+}
+
+.layout-pages {
+  border: 5px solid orange;
+}
+
+.general-statistic {
+  border: 5px solid blue;
+}
+
+.links {
+  border: 5px solid blue;
+}
+
+.top-menu {
+  border: 5px solid green;
+}
+
+.top-menu i, .top-menu span {
+  padding: 10px;
+}
+
+.name {
+  border: 2px solid yellow;
 }
 
 .name ul {
   font-size: 20px;
-  padding-left: 15px;
+  padding-left: 5px;
   list-style-type: none;
   color: white;
-  display: inline-flex;
 }
 
 .name li {
-  display: inline;
+  display: inline-block;
   padding-right: 0px;
   margin-right: 0px;
+  position: relative;
 }
 
 .name i {
+  padding-left: 15px;
   margin-right: 12px;
 }
 
@@ -375,17 +412,19 @@ template {
 }
 
 .menu li {
-  padding: 10px;
+  padding: 10px 0;
 }
 
 .menu a {
   color: white;
   text-decoration: none;
-  padding-left: 10px;
+  padding-left: 0px;
 }
 
 .menu i {
   padding-right: 10px;
+  padding-left: 0px;
+  margin-left: 0px;
 }
 
 /* Components */

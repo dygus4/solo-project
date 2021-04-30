@@ -1,46 +1,84 @@
-.row {
-    height: 100vh;
+.container {
+    
     margin: 0px;
     padding: 0px;
     font-family: $font-header;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
   }
 
 
 .sidebar {
+  width: fit-content;
   background-color: $black-color;
-  
+  height: 100vh;
   color: $red-color;
+  flex: 1;
+  
+}
+.content {
+    flex: 4;
+    border: 5px solid black;
+    margin: 0;
+    padding: 0;
+}
+.layout-pages {
+    border: 5px solid orange;
+}
+.general-statistic {
+    border: 5px solid blue;
+}
+.links {
+    border: 5px solid blue;
+}
+
+.top-menu {
+    border: 5px solid green;
+    
+    i, span {
+        padding: 10px;
+    }
+}
+
+.name {
+    border: 2px solid yellow;
 }
 .name ul {
     font-size: 20px;
-    padding-left: 15px;
+    padding-left: 5px;
     list-style-type: none;
     color: $white-color;
-    display: inline-flex;
+    
 }
 .name li { 
-    display: inline;
+    display: inline-block;
     padding-right: 0px;
     margin-right: 0px;
+    position: relative;
 }
 .name i {
-   
+    padding-left: 15px;
     margin-right: 12px;
+    
 }
 
 .menu ul {
     list-style-type: none;
 }
 .menu li{
-    padding: 10px;
+    padding: 10px 0;
+
 }
 .menu a {
     color: $white-color;
     text-decoration: none;
-    padding-left: 10px;
+    padding-left: 0px;
 }
 .menu i {
     padding-right: 10px;
+    padding-left: 0px;
+    margin-left: 0px;
     
 }
 
