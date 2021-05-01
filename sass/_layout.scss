@@ -45,28 +45,43 @@
 .layout-pages {
     border: 5px solid orange;
 }
+.section {
+    padding-bottom: 20px;
+}
 /*General static*/
 
 .general-statistic {
     border: 5px solid blue;
     h2{
         padding: 20px;
+        border-bottom: 1px solid $paragraph-color;
     }
 }
 .date {
     display: flex;
     justify-content: center;
-    margin: 15px;
+    margin: 30px;
     p {
         padding: 10px 20px;
         margin: 0;
         border: 1px solid black;
     }
-    a:last-of-type {
-        padding: 10px;
+    .fas {
+        padding: 14px;
         color: white;
-        background-color: black;
+        background-color: $orange-color;
+        margin: 0 10px;
     }
+    .fas:hover {
+        background-color: $orange-light-color
+    }
+
+    .far {
+        color: black;
+        background-color: white;
+        padding: 0 0 0 10px;
+    }
+    
 }
 .statistic {
     display: flex;
@@ -80,11 +95,66 @@
     }
 }
 
-
+/* LINKS */
 .links {
     border: 5px solid blue;
-}
+    h2 {
+        padding: 20px;
+        border-bottom: 1px solid $paragraph-color;
+    }
+    .table-link {
+        display: flex;
+        justify-content: center;
+        margin: 20px;
+        a {
+            display: flex;
+            justify-content: center;
+            margin: 5px;
+            text-decoration: none;
+            color: $paragraph-color;
+            i {
+                visibility: hidden;
+            }
+        }
+        a:hover {
+            color: $orange-light-color;
+        }
 
+        
+        td {
+            border-bottom: 1px solid black;
+        }
+        tr:hover {
+            opacity: 0.5s;
+            background-color: $blue-color;
+            i {
+                visibility: visible;
+            }
+        }
+    }
+}
+.btn {
+    display: flex;
+    justify-content: center;
+    min-width: 160px;
+    margin: 24px auto 0 auto;
+    padding: 16px;
+    border-radius: 5px;
+    width: 150px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 0 auto;
+    transition: all 1s;
+}
+.btn-one {
+    color: $white-color;
+    background-color: $orange-color; 
+}
+.btn-one:hover {
+    background-color: $orange-light-color;
+}
 .top-menu {
     border: 5px solid green;
     display: flex;
@@ -92,6 +162,7 @@
     
     i, span {
         padding: 10px;
+        color: $paragraph-color;
     }
 }
 
@@ -112,17 +183,22 @@
     position: relative;
 }
 .name i {
-    padding-left: 15px;
-    margin-right: 12px;
+    padding-left: 20px;
     
+    color: $white-color;
 }
 
 .menu ul {
     list-style-type: none;
+    padding-left: 20px;
 }
-.menu li{
-    padding: 10px 0;
-
+.menu {
+    li{
+        padding: 10px 0;
+    }
+    li:hover {
+        background-color: $grey-color;
+    }
 }
 .menu a {
     color: $white-color;

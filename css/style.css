@@ -388,6 +388,10 @@ template {
   border: 5px solid orange;
 }
 
+.section {
+  padding-bottom: 20px;
+}
+
 /*General static*/
 .general-statistic {
   border: 5px solid blue;
@@ -395,12 +399,13 @@ template {
 
 .general-statistic h2 {
   padding: 20px;
+  border-bottom: 1px solid #000000;
 }
 
 .date {
   display: flex;
   justify-content: center;
-  margin: 15px;
+  margin: 30px;
 }
 
 .date p {
@@ -409,10 +414,21 @@ template {
   border: 1px solid black;
 }
 
-.date a:last-of-type {
-  padding: 10px;
+.date .fas {
+  padding: 14px;
   color: white;
-  background-color: black;
+  background-color: #F58220;
+  margin: 0 10px;
+}
+
+.date .fas:hover {
+  background-color: #FFA200;
+}
+
+.date .far {
+  color: black;
+  background-color: white;
+  padding: 0 0 0 10px;
 }
 
 .statistic {
@@ -426,8 +442,74 @@ template {
   margin: 0 auto;
 }
 
+/* LINKS */
 .links {
   border: 5px solid blue;
+}
+
+.links h2 {
+  padding: 20px;
+  border-bottom: 1px solid #000000;
+}
+
+.links .table-link {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.links .table-link a {
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+  text-decoration: none;
+  color: #000000;
+}
+
+.links .table-link a i {
+  visibility: hidden;
+}
+
+.links .table-link a:hover {
+  color: #FFA200;
+}
+
+.links .table-link td {
+  border-bottom: 1px solid black;
+}
+
+.links .table-link tr:hover {
+  opacity: 0.5s;
+  background-color: #abdbe7;
+}
+
+.links .table-link tr:hover i {
+  visibility: visible;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  min-width: 160px;
+  margin: 24px auto 0 auto;
+  padding: 16px;
+  border-radius: 5px;
+  width: 150px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  margin: 0 auto;
+  transition: all 1s;
+}
+
+.btn-one {
+  color: white;
+  background-color: #F58220;
+}
+
+.btn-one:hover {
+  background-color: #FFA200;
 }
 
 .top-menu {
@@ -438,6 +520,7 @@ template {
 
 .top-menu i, .top-menu span {
   padding: 10px;
+  color: #000000;
 }
 
 .name {
@@ -459,16 +542,21 @@ template {
 }
 
 .name i {
-  padding-left: 15px;
-  margin-right: 12px;
+  padding-left: 20px;
+  color: white;
 }
 
 .menu ul {
   list-style-type: none;
+  padding-left: 20px;
 }
 
 .menu li {
   padding: 10px 0;
+}
+
+.menu li:hover {
+  background-color: #cec8c8;
 }
 
 .menu a {
