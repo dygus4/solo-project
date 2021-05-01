@@ -41,6 +41,7 @@
     border: 5px solid black;
     margin: 0;
     padding: 0;
+    
 }
 .layout-pages {
     border: 5px solid orange;
@@ -160,9 +161,14 @@
     display: flex;
     justify-content: flex-end;
     
-    i, span {
+    a, span {
         padding: 10px;
         color: $paragraph-color;
+    }
+    a:hover {
+        color: $orange-light-color;
+        background-color: $grey-color;
+
     }
 }
 

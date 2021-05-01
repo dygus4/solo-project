@@ -518,9 +518,14 @@ template {
   justify-content: flex-end;
 }
 
-.top-menu i, .top-menu span {
+.top-menu a, .top-menu span {
   padding: 10px;
   color: #000000;
+}
+
+.top-menu a:hover {
+  color: #FFA200;
+  background-color: #cec8c8;
 }
 
 .name {
