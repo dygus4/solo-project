@@ -33,7 +33,10 @@
   background-color: $black-color;
   height: 100vh;
   color: $red-color;
-  
+  text-align: center;
+  //min-width: 190px;
+  //max-width: 190px;
+  //position: fixed;
   
 }
 .content {
@@ -41,7 +44,8 @@
     border: 5px solid black;
     margin: 0;
     padding: 0;
-    
+    //width: calc(100%-190px);
+    //margin-left: 190px;
 }
 .layout-pages {
     border: 5px solid orange;
@@ -90,9 +94,12 @@
     margin: 20px;
 }
 .chart {
+    
     img {
         display: block;
         margin: 0 auto;
+        object-fit: cover;
+        max-width: 100%;
     }
 }
 

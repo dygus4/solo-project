@@ -10,16 +10,17 @@
   <link rel="stylesheet" href="vendor/bootstrap-grid.css">
 
   <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
     <div class="row">
-        <div class="sidebar col col-2">
+        <div class="sidebar col col-sm-5 col-md-4 col-lg-3 col-xl-2">
            <div class="name">
             
 
             <ul>
               <li><p>Just do it</p></li>
-              <li><a href="#"><i class="fas fa-bars"></i></a></li>
+              <li><a href="#"><i class="fas fa-bars hamburger"></i></a></li>
             </ul>
           </div>
           <div class="menu">
@@ -38,17 +39,24 @@
             <a href="#"><img src="images/manager-black.jpg">Mikhael E.</a>
           </div>
         </div>
-        <div class="content col col-10">
-          <div class="top-menu">
-            <a href="#"><i class="fas fa-wallet"></i></a>
-            <span>$1,500.00</span>
-            <a href="#"><i class="fas fa-chevron-down"></i></a>
-            <a href="#"><i class="far fa-bell"></i></a>
-            <a href="#"><i class="far fa-user-circle"></i></a>
-            <span>Leonardo Dicaprio</span>
-            <a href="#"><i class="fas fa-sign-out-alt"></i></a>
+        <div class="content col col-sm-7 col-md-8 col-lg-9 col-xl-10">
+          <div class="top-top-menu">
+            <div class="top-menu">
+              <a href="#"><i class="fas fa-wallet"></i></a>
+              <select>
+                <optgroup label="High of wallet">
+                  <option value="1500">$1,500.00</option>
+                  <option value="2000">$2,000.00</option>
+                  <option value="2500">$2,500.00</option>
+                </optgroup>
+              </select>
+              
+              <a href="#"><i class="far fa-bell"></i></a>
+              <a href="#"><i class="far fa-user-circle"></i></a>
+              <span>Leonardo Dicaprio</span>
+              <a href="#"><i class="fas fa-sign-out-alt"></i></a>
+            </div>
           </div>
-
           <div class="layout-pages">
             <div class="general">
 
@@ -56,7 +64,8 @@
                 <h2>GENERAL STATIC</h2>
                 <div class="date">
                     <p>16.05.2016</p>
-                    <p>16.05.2016 <a href="#"><i class="far fa-calendar-alt"></i></a></p>
+                    <input type="date">
+                    
                     <a href="#"><i class="fas fa-redo"></i></a>
                 </div>
                 <div class="chart">
