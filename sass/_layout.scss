@@ -225,4 +225,49 @@
     
 }
 
+/*Contact*/
 
+.contact {
+    border: 5px solid blue;
+    padding-bottom: 20px;
+    h2 {
+        padding: 20px;
+        border-bottom: 1px solid $paragraph-color;
+    }
+}
+.element {
+    display: flex;
+    .formularz {
+        display: flex;
+        justify-content: center;
+        flex: 2;
+        form{
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+        }
+    
+    }
+    .dane {
+        flex: 1;
+        margin-top: 50px;
+    }
+}
+input, textarea {
+    max-width: 1500px;
+    margin: 10px;
+    padding: 5px;
+}
+
+@media(max-width: 768px) {
+    .contact {
+        .element {
+            flex-direction: column;
+        }
+        
+        .dane {
+                text-align: center;
+        }
+        
+    }
+}

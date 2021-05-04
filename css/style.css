@@ -579,6 +579,53 @@ template {
   margin-left: 0px;
 }
 
+/*Contact*/
+.contact {
+  border: 5px solid blue;
+  padding-bottom: 20px;
+}
+
+.contact h2 {
+  padding: 20px;
+  border-bottom: 1px solid #000000;
+}
+
+.element {
+  display: flex;
+}
+
+.element .formularz {
+  display: flex;
+  justify-content: center;
+  flex: 2;
+}
+
+.element .formularz form {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+.element .dane {
+  flex: 1;
+  margin-top: 50px;
+}
+
+input, textarea {
+  max-width: 1500px;
+  margin: 10px;
+  padding: 5px;
+}
+
+@media (max-width: 768px) {
+  .contact .element {
+    flex-direction: column;
+  }
+  .contact .dane {
+    text-align: center;
+  }
+}
+
 /* Components */
 /* Sections */
 /* Pages / Views */
