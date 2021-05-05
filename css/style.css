@@ -445,6 +445,12 @@ template {
   max-width: 100%;
 }
 
+.chart .tableOne {
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
 /* LINKS */
 .links {
   border: 5px solid blue;
@@ -606,6 +612,17 @@ template {
   justify-content: center;
 }
 
+.element .formularz form .form-contact {
+  max-width: 1500px;
+  margin: 10px;
+  padding: 5px;
+}
+
+.element .formularz form .form-contact:valid {
+  background: rgba(0, 255, 0, 0.1);
+  border: 1px solid #55ee70;
+}
+
 .element .dane {
   flex: 1;
   margin-top: 50px;
@@ -613,7 +630,6 @@ template {
 
 input, textarea {
   max-width: 1500px;
-  margin: 10px;
   padding: 5px;
 }
 
@@ -624,6 +640,89 @@ input, textarea {
   .contact .dane {
     text-align: center;
   }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  padding: 30px;
+  display: none;
+}
+
+.overlay.show {
+  display: flex;
+}
+
+.modal {
+  max-width: 600px;
+  margin: auto;
+  background-color: #ffffff;
+  position: relative;
+  padding: 30px;
+  display: none;
+}
+
+.modal.show {
+  display: block;
+}
+
+.modal .btn-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px 10px;
+}
+
+.modal .btn {
+  display: inline-block;
+  margin: 20px;
+}
+
+.modal h2 {
+  margin: 30px;
+}
+
+#signInModal form {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+#signInModal form input {
+  margin: 10px 0;
+}
+
+#signInModal form .login:valid {
+  background: rgba(0, 255, 0, 0.1);
+  border: 1px solid #55ee70;
+}
+
+#manager .nameManager {
+  display: flex;
+  align-items: center;
+}
+
+#manager .nameManager img {
+  height: 50px;
+  margin: 20px;
+}
+
+#manager form {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
 }
 
 /* Components */

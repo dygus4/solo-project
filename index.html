@@ -36,7 +36,7 @@
           </div>
           <div class="manager">
             <h3>YOUR MANAGER</h3>
-            <a href="#"><img src="images/manager-black.jpg">Mikhael E.</a>
+            <a href="#" id="manager-button"><img src="images/manager-black.jpg">Mikhael E.</a>
           </div>
         </div>
         <div class="content col col-sm-7 col-md-8 col-lg-9 col-xl-10">
@@ -52,9 +52,9 @@
               </select>
               
               <a href="#"><i class="far fa-bell"></i></a>
-              <a href="#"><i class="far fa-user-circle"></i></a>
+              <a href="#"><i id="sign-in-button" class="far fa-user-circle"></i></a>
               <span>Leonardo Dicaprio</span>
-              <a href="#"><i class="fas fa-sign-out-alt"></i></a>
+              <a href="#"><i id= "test-button" class="fas fa-sign-out-alt"></i></a>
             </div>
           </div>
           <div class="layout-pages">
@@ -85,6 +85,7 @@
                             </tr>
                         </tbody>
                     </table>
+                    <canvas class ="tableOne" id="myChart"></canvas>
                     <img src="images/general.jpg">
                 </div>    
               </div>
@@ -143,20 +144,21 @@
     
             </div>
           </div>
+          
           <section class="contact">
             
             <h2>CONTACT</h2>
             
             <div class="element">
                 <div class="formularz">
-                    <form>
+                    <form action="" method="POST">
                         <h3>Do You have some question?</h3>
                         <h3>Write to Us</h3>
-                        <input type="text" placeholder="Your name">
-                        <input type="email" placeholder="Your e-mail">
-                        <input type="text" placeholder="Subject">
-                        <textarea rows="15" cols="30" placeholder="Write Your message here"></textarea>
-                        <input type="submit" value="Submit" class="btn btn-one" btn-one>
+                        <input required class="form-contact" type="text" name="user-namer" placeholder="Your name">
+                        <input required class="form-contact" type="email" name="email" placeholder="Your e-mail">
+                        <input required class="form-contact" type="text" name="subject" placeholder="Subject">
+                        <textarea required class="form-contact" rows="15" cols="30" name="message" placeholder="Write Your message here"></textarea>
+                        <input type="submit" value="Submit" class="btn btn-one">
                     </form>
                 </div>
                 
@@ -172,6 +174,42 @@
                 </div>
             </div>
           </section>
+          <div class="overlay" id="overlay">
+            <div class="modal" id="myModal">
+              <div class="btn-close js--close-modal">x</div>
+              <h2>Do You really want to quit?</h2>
+              <button class="js--close-modal btn btn-one">Cancel</button>
+              <button class="js--close-modal btn btn-one">Quit</button>
+            </div>
+
+            <div class="modal" id="signInModal">
+              <div class="btn-close js--close-modal">x</div>
+              <h2>LOGIN</h2>
+              <form action="">
+                <input class=login type="text" placeholder="Your Name/Your Nick" required>
+                <input class=login type="email" placeholder="Email address*" required>
+	              <input class=login type="password" placeholder="Your password*" required>
+                <input type="submit" value="Enter" class="btn btn-one">
+	              <button class="js--close-modal btn btn-one">Get back</button>
+              </form>
+            </div>
+
+            <div class="modal" id="manager">
+              <div class="btn-close js--close-modal">x</div>
+              <h3>SEND MESSAGE TO YOUR PERSONAL MANAGER</h3>
+                <div class="nameManager">
+                  <img src="images/manager-black.jpg">
+                  <h3>Mikhael E.</h3>
+                </div>
+              <form>
+                <textarea rows="10" cols="50" name="message" placeholder="Write Your message here"></textarea>
+                <input type="submit" value="Send" class="btn btn-one">
+              </form>
+            </div>
+
+          </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <script src="js/script.js" type="module"></script>
 </body>
 </html>
