@@ -3,7 +3,7 @@
 // HAMBURGEREK
 
 function toggleMenu(visible) {
-    document.querySelector('.menu').classList.toggle('show')
+    document.querySelector('.menu-menager').classList.toggle('show')
   };
   document.querySelector('.hamburger').addEventListener('click', function(e) {
     e.preventDefault();

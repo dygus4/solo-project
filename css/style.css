@@ -374,7 +374,6 @@ template {
 .sidebar {
   width: fit-content;
   background-color: #333333;
-  height: 100vh;
   color: #FF0000;
   text-align: center;
 }
@@ -557,7 +556,17 @@ template {
 
 .name i {
   padding-left: 20px;
+  display: none;
   color: white;
+}
+
+@media (max-width: 768px) {
+  .name i {
+    display: block;
+  }
+  .name a {
+    text-decoration: none;
+  }
 }
 
 .menu ul {
@@ -723,6 +732,23 @@ input, textarea {
   display: flex;
   flex-flow: column;
   align-items: center;
+}
+
+@media (max-width: 768px) {
+  .menu-menager {
+    display: none;
+  }
+  .menu-menager.show {
+    display: block;
+  }
+}
+
+@media (max-width: 576px) {
+  .col-my {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 }
 
 /* Components */
