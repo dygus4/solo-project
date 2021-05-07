@@ -50,12 +50,12 @@
 .layout-pages {
     border: 5px solid orange;
 }
-.section {
+.post {
     padding-bottom: 20px;
 }
 /*General static*/
 
-.general-statistic {
+.post {
     border: 5px solid blue;
     h2{
         padding: 20px;
@@ -136,6 +136,7 @@
         
         td {
             border-bottom: 1px solid black;
+            padding: 15px 0;
         }
         tr:hover {
             opacity: 0.5s;
@@ -184,9 +185,7 @@
     }
 }
 
-.name {
-    border: 2px solid yellow;
-}
+
 .name ul {
     font-size: 20px;
     padding-left: 5px;
@@ -232,6 +231,9 @@
     color: $white-color;
     text-decoration: none;
     padding-left: 0px;
+    &.active {
+        color: $orange-color;
+    }
 }
 .menu i {
     padding-right: 10px;
@@ -396,4 +398,85 @@ input, textarea {
     max-width: 100%;
     }
 }
+   
+//layout stylowanie dla poszczególnych artykułów
+
+.post {
+    display: none;
+    &.active {
+      display: block;
+    }
+}
+
+//personal data
+.personalData {
+    form {
+    display: flex;
+    flex-flow: column;
+    align-items: center
     
+    }
+}
+.formPersonalData {
+    .for-contact{
+        min-width: 300px;
+        margin: 0 0 20px 0;
+    }
+    p {
+        font-size: 20px;
+    }
+}
+// payout
+.payout{
+    table {
+        width: 90%;
+        text-align: center;
+        margin: 0 auto;
+
+        th, td {
+            padding: 15px 5px;
+            border-bottom: 2px solid $paragraph-color;
+        }
+        tbody{
+            tr:hover{
+                background-color: $blue-color;
+            }
+        }
+        thead{
+            a{
+                padding: 10px 15px;
+                color: $paragraph-color;
+            }
+            a:hover {
+                background-color: $grey-color;
+            }
+        }
+    }
+    a{
+        text-decoration: none;
+    }
+    .pages-list {
+        text-align: center;
+        li{
+            list-style-type: none;
+            display: inline-block;
+            padding: 10px;
+            a {
+                color: $paragraph-color;
+            }
+        }
+        li:hover {
+            background-color: $grey-color;
+        }
+    }
+    .scroll-wrapper {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+      }
+      
+      .scroll-wrapper table {
+        width: 100%;
+        max-width: 100%;
+      }
+}

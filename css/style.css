@@ -388,16 +388,16 @@ template {
   border: 5px solid orange;
 }
 
-.section {
+.post {
   padding-bottom: 20px;
 }
 
 /*General static*/
-.general-statistic {
+.post {
   border: 5px solid blue;
 }
 
-.general-statistic h2 {
+.post h2 {
   padding: 20px;
   border-bottom: 1px solid #000000;
 }
@@ -484,6 +484,7 @@ template {
 
 .links .table-link td {
   border-bottom: 1px solid black;
+  padding: 15px 0;
 }
 
 .links .table-link tr:hover {
@@ -536,10 +537,6 @@ template {
   background-color: #cec8c8;
 }
 
-.name {
-  border: 2px solid yellow;
-}
-
 .name ul {
   font-size: 20px;
   padding-left: 5px;
@@ -586,6 +583,10 @@ template {
   color: white;
   text-decoration: none;
   padding-left: 0px;
+}
+
+.menu a.active {
+  color: #F58220;
 }
 
 .menu i {
@@ -749,6 +750,86 @@ input, textarea {
     flex: 0 0 100%;
     max-width: 100%;
   }
+}
+
+.post {
+  display: none;
+}
+
+.post.active {
+  display: block;
+}
+
+.personalData form {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.formPersonalData .for-contact {
+  min-width: 300px;
+  margin: 0 0 20px 0;
+}
+
+.formPersonalData p {
+  font-size: 20px;
+}
+
+.payout table {
+  width: 90%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.payout table th, .payout table td {
+  padding: 15px 5px;
+  border-bottom: 2px solid #000000;
+}
+
+.payout table tbody tr:hover {
+  background-color: #abdbe7;
+}
+
+.payout table thead a {
+  padding: 10px 15px;
+  color: #000000;
+}
+
+.payout table thead a:hover {
+  background-color: #cec8c8;
+}
+
+.payout a {
+  text-decoration: none;
+}
+
+.payout .pages-list {
+  text-align: center;
+}
+
+.payout .pages-list li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 10px;
+}
+
+.payout .pages-list li a {
+  color: #000000;
+}
+
+.payout .pages-list li:hover {
+  background-color: #cec8c8;
+}
+
+.payout .scroll-wrapper {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.payout .scroll-wrapper table {
+  width: 100%;
+  max-width: 100%;
 }
 
 /* Components */
