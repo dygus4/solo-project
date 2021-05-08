@@ -1,0 +1,18 @@
+//personal data
+.personalData {
+    form {
+    display: flex;
+    flex-flow: column;
+    align-items: center
+    
+    }
+}
+.formPersonalData {
+    .for-contact{
+        min-width: 300px;
+        margin: 0 0 20px 0;
+    }
+    p {
+        font-size: 20px;
+    }
+}

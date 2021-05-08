@@ -1,0 +1,48 @@
+/*Contact*/
+
+
+.element {
+    display: flex;
+    .formularz {
+        display: flex;
+        justify-content: center;
+        flex: 2;
+        form{
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            .form-contact{
+                max-width: 1500px;
+                margin: 10px;
+                padding: 5px; 
+            }
+            .form-contact:valid {
+                background: rgba(0, 255, 0, 0.1);
+                border: 1px solid #55ee70;
+            }
+        }
+    
+    }
+    .dane {
+        flex: 1;
+        margin-top: 50px;
+    }
+}
+input, textarea {
+    max-width: 1500px;
+    //margin: 10px;
+    padding: 5px;
+}
+
+@media(max-width: 768px) {
+    .contact {
+        .element {
+            flex-direction: column;
+        }
+        
+        .dane {
+                text-align: center;
+        }
+        
+    }
+}

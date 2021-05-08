@@ -6,9 +6,21 @@
 
 /* Components */
 @import "components/form_field";
+@import "components/button";
+@import "components/modale";
 
 /* Sections */
 @import "sections/registration_form";
 
+
 /* Pages / Views */
+
+@import "pages/general";
+@import "pages/links";
+@import "pages/banners";
+@import "pages/personal-data";
+@import "pages/details";
+@import "pages/payout";
+@import "pages/postback";
+@import "pages/contact";
 @import "pages/registration";

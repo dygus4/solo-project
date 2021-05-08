@@ -7,6 +7,13 @@
     flex-wrap: wrap;
     width: 100%;
 }
+
+.col {
+    float: left;
+}
+
+
+//SIDEBAR
 .manager {
     padding: 20px;
 
@@ -18,6 +25,9 @@
         text-decoration: none;
         color: $white-color;
     }
+    a:hover {
+        color: $orange-color
+    }
 
     img {
         height: 25px;
@@ -25,9 +35,6 @@
     }
 }
 
-.col {
-    float: left;
-}
 .sidebar {
   width: fit-content;
   background-color: $black-color;
@@ -37,184 +44,7 @@
   //min-width: 190px;
   //max-width: 190px;
   //position: fixed;
-  
 }
-.content {
-    
-    border: 5px solid black;
-    margin: 0;
-    padding: 0;
-    //width: calc(100%-190px);
-    //margin-left: 190px;
-}
-.layout-pages {
-    border: 5px solid orange;
-}
-.post {
-    padding-bottom: 20px;
-}
-/*General static*/
-
-.post {
-    border: 5px solid blue;
-    h2{
-        padding: 20px;
-        border-bottom: 1px solid $paragraph-color;
-    }
-}
-.date {
-    display: flex;
-    justify-content: center;
-    margin: 30px;
-    p {
-        padding: 10px 20px;
-        margin: 0;
-        border: 1px solid black;
-    }
-    .fas {
-        padding: 14px;
-        color: white;
-        background-color: $orange-color;
-        margin: 0 10px;
-    }
-    .fas:hover {
-        background-color: $orange-light-color
-    }
-
-    .far {
-        color: black;
-        background-color: white;
-        padding: 0 0 0 10px;
-    }
-    
-}
-.statistic {
-    display: flex;
-    justify-content: center;
-    margin: 20px;
-}
-.chart {
-    
-    img {
-        display: block;
-        margin: 0 auto;
-        object-fit: cover;
-        max-width: 100%;
-    }
-    .tableOne {
-        max-width: 90%;
-        margin: 0 auto;
-        padding: 20px;
-    }
-}
-
-/* LINKS */
-.links {
-    border: 5px solid blue;
-    h2 {
-        padding: 20px;
-        border-bottom: 1px solid $paragraph-color;
-    }
-    .table-link {
-        display: flex;
-        justify-content: center;
-        margin: 20px;
-        a {
-            display: flex;
-            justify-content: center;
-            margin: 5px;
-            text-decoration: none;
-            color: $paragraph-color;
-            i {
-                visibility: hidden;
-            }
-        }
-        a:hover {
-            color: $orange-light-color;
-        }
-
-        
-        td {
-            border-bottom: 1px solid black;
-            padding: 15px 0;
-        }
-        tr:hover {
-            opacity: 0.5s;
-            background-color: $blue-color;
-            i {
-                visibility: visible;
-            }
-        }
-    }
-}
-.btn {
-    display: flex;
-    justify-content: center;
-    min-width: 160px;
-    margin: 24px auto 0 auto;
-    padding: 16px;
-    border-radius: 5px;
-    width: 150px;
-    font-size: 16px;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    margin: 0 auto;
-    transition: all 1s;
-}
-.btn-one {
-    color: $white-color;
-    background-color: $orange-color; 
-}
-.btn-one:hover {
-    background-color: $orange-light-color;
-}
-.top-menu {
-    border: 5px solid green;
-    display: flex;
-    justify-content: flex-end;
-    
-    a, span {
-        padding: 10px;
-        color: $paragraph-color;
-    }
-    a:hover {
-        color: $orange-light-color;
-        background-color: $grey-color;
-
-    }
-}
-
-
-.name ul {
-    font-size: 20px;
-    padding-left: 5px;
-    list-style-type: none;
-    color: $white-color;
-    
-}
-.name li { 
-    display: inline-block;
-    padding-right: 0px;
-    margin-right: 0px;
-    position: relative;
-}
-.name i {
-    padding-left: 20px;
-    display: none;
-    color: $white-color;
-}
-@media(max-width: 768px) {
-    .name {
-        i {
-            display: block;
-        }
-        a {
-            text-decoration:none;
-        }
-    }    
-}
-
 .menu ul {
     list-style-type: none;
     padding-left: 20px;
@@ -242,144 +72,38 @@
     
 }
 
-/*Contact*/
 
-.contact {
-    border: 5px solid blue;
-    padding-bottom: 20px;
-    h2 {
-        padding: 20px;
-        border-bottom: 1px solid $paragraph-color;
-    }
-}
-.element {
-    display: flex;
-    .formularz {
-        display: flex;
-        justify-content: center;
-        flex: 2;
-        form{
-            display: flex;
-            flex-flow: column;
-            justify-content: center;
-            .form-contact{
-                max-width: 1500px;
-                margin: 10px;
-                padding: 5px; 
-            }
-            .form-contact:valid {
-                background: rgba(0, 255, 0, 0.1);
-                border: 1px solid #55ee70;
-            }
-        }
+//Hamburgerek w sidebarze
+.name ul {
+    font-size: 20px;
+    padding-left: 5px;
+    list-style-type: none;
+    color: $white-color;
     
-    }
-    .dane {
-        flex: 1;
-        margin-top: 50px;
-    }
 }
-input, textarea {
-    max-width: 1500px;
-    //margin: 10px;
-    padding: 5px;
-}
-
-@media(max-width: 768px) {
-    .contact {
-        .element {
-            flex-direction: column;
-        }
-        
-        .dane {
-                text-align: center;
-        }
-        
-    }
-}
-
-// MODALE
-
-* {
-    box-sizing: border-box;
-}
-.overlay {
-    position: fixed;
-     top: 0;
-    left: 0;
-    z-index: 999;
-  
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.5);
-
-    justify-content: center;
-    align-items: center;
-
-    overflow: auto;
-    padding: 30px;
-
-    display: none;
-}
-
-.overlay.show {
-    display: flex;
-}
-
-.modal {
-    max-width: 600px;
-    margin: auto;
-    background-color: #ffffff;
+.name li { 
+    display: inline-block;
+    padding-right: 0px;
+    margin-right: 0px;
     position: relative;
-    padding: 30px;
+}
+.name li a i:hover {
+    color: $orange-color
+}
+.name i {
+    padding-left: 20px;
     display: none;
+    color: $white-color;
 }
-.modal.show {
-    display: block;
-}
-.modal .btn-close {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 5px 10px;
-}
-.modal {
-    .btn {
-        display: inline-block;
-        margin: 20px;
-    }
-    h2 {
-        margin: 30px;
-    }
-}
-#signInModal {
-    form{
-        display: flex;
-        flex-flow: column;
-        align-items: center;;
-        input {
-            margin: 10px 0;
+@media(max-width: 768px) {
+    .name {
+        i {
+            display: block;
         }
-        .login:valid {
-            background: rgba(0, 255, 0, 0.1);
-            border: 1px solid #55ee70; 
+        a {
+            text-decoration:none;
         }
-    }
-}
-#manager {
-    .nameManager{
-        display: flex;
-        align-items: center;
-        img{
-            height: 50px;
-            margin: 20px;
-        }
-    }
-    form{
-        display: flex;
-        flex-flow: column;
-        align-items: center;
-    }
+    }    
 }
 
 //hamburgerek
@@ -398,9 +122,26 @@ input, textarea {
     max-width: 100%;
     }
 }
-   
-//layout stylowanie dla poszczególnych artykułów
 
+//CONTENT
+
+.content {
+    
+    border: 5px solid black;
+    margin: 0;
+    padding: 0;
+    //width: calc(100%-190px);
+    //margin-left: 190px;
+}
+
+.post {
+    //border: 5px solid blue;
+    padding-bottom: 20px;
+    h2{
+        padding: 20px;
+        border-bottom: 1px solid $paragraph-color;
+    }
+}
 .post {
     display: none;
     &.active {
@@ -408,80 +149,23 @@ input, textarea {
     }
 }
 
-//personal data
-.personalData {
-    form {
-    display: flex;
-    flex-flow: column;
-    align-items: center
-    
-    }
-}
-.formPersonalData {
-    .for-contact{
-        min-width: 300px;
-        margin: 0 0 20px 0;
-    }
-    p {
-        font-size: 20px;
-    }
-}
-// payout
-.payout{
-    table {
-        width: 90%;
-        text-align: center;
-        margin: 0 auto;
 
-        th, td {
-            padding: 15px 5px;
-            border-bottom: 2px solid $paragraph-color;
-        }
-        tbody{
-            tr:hover{
-                background-color: $blue-color;
-            }
-        }
-        thead{
-            a{
-                padding: 10px 15px;
-                color: $paragraph-color;
-            }
-            a:hover {
-                background-color: $grey-color;
-            }
-        }
+
+//Top MENU
+
+.top-menu {
+    //border: 5px solid green;
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 3px solid $paragraph-color;
+    a, span {
+        padding: 10px;
+        color: $paragraph-color;
     }
-    a{
-        text-decoration: none;
-    }
-    .pages-list {
-        text-align: center;
-        li{
-            list-style-type: none;
-            display: inline-block;
-            padding: 10px;
-            a {
-                color: $paragraph-color;
-            }
-        }
-        li:hover {
-            background-color: $grey-color;
-        }
-    }
-    .scroll-wrapper {
-        display: block;
-        width: 100%;
-        overflow-x: auto;
-      }
-      
-      .scroll-wrapper table {
-        width: 100%;
-        max-width: 100%;
-      }
-}
-.postback{
-    p{
-        padding: 20px;
+    a:hover {
+        color: $orange-light-color;
+        background-color: $grey-color;
+
     }
 }
+

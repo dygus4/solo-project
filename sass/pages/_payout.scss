@@ -1,0 +1,54 @@
+// payout
+.payout{
+    table {
+        width: 90%;
+        text-align: center;
+        margin: 0 auto;
+
+        th, td {
+            padding: 15px 5px;
+            border-bottom: 2px solid $paragraph-color;
+        }
+        tbody{
+            tr:hover{
+                background-color: $blue-color;
+            }
+        }
+        thead{
+            a{
+                padding: 10px 15px;
+                color: $paragraph-color;
+            }
+            a:hover {
+                background-color: $grey-color;
+            }
+        }
+    }
+    a{
+        text-decoration: none;
+    }
+    .pages-list {
+        text-align: center;
+        li{
+            list-style-type: none;
+            display: inline-block;
+            padding: 10px;
+            a {
+                color: $paragraph-color;
+            }
+        }
+        li:hover {
+            background-color: $grey-color;
+        }
+    }
+    .scroll-wrapper {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+      }
+      
+      .scroll-wrapper table {
+        width: 100%;
+        max-width: 100%;
+      }
+}

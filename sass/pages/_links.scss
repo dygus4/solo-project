@@ -1,0 +1,39 @@
+/* LINKS */
+.links {
+    //border: 5px solid blue;
+    h2 {
+        padding: 20px;
+        border-bottom: 1px solid $paragraph-color;
+    }
+    .table-link {
+        display: flex;
+        justify-content: center;
+        margin: 20px;
+        a {
+            display: flex;
+            justify-content: center;
+            margin: 5px;
+            text-decoration: none;
+            color: $paragraph-color;
+            i {
+                visibility: hidden;
+            }
+        }
+        a:hover {
+            color: $orange-light-color;
+        }
+
+        
+        td {
+            border-bottom: 1px solid black;
+            padding: 15px 0;
+        }
+        tr:hover {
+            opacity: 0.5s;
+            background-color: $blue-color;
+            i {
+                visibility: visible;
+            }
+        }
+    }
+}

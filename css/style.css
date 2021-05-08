@@ -349,6 +349,10 @@ template {
   width: 100%;
 }
 
+.col {
+  float: left;
+}
+
 .manager {
   padding: 20px;
 }
@@ -362,13 +366,13 @@ template {
   color: white;
 }
 
+.manager a:hover {
+  color: #F58220;
+}
+
 .manager img {
   height: 25px;
   padding-right: 10px;
-}
-
-.col {
-  float: left;
 }
 
 .sidebar {
@@ -376,194 +380,6 @@ template {
   background-color: #333333;
   color: #FF0000;
   text-align: center;
-}
-
-.content {
-  border: 5px solid black;
-  margin: 0;
-  padding: 0;
-}
-
-.layout-pages {
-  border: 5px solid orange;
-}
-
-.post {
-  padding-bottom: 20px;
-}
-
-/*General static*/
-.post {
-  border: 5px solid blue;
-}
-
-.post h2 {
-  padding: 20px;
-  border-bottom: 1px solid #000000;
-}
-
-.date {
-  display: flex;
-  justify-content: center;
-  margin: 30px;
-}
-
-.date p {
-  padding: 10px 20px;
-  margin: 0;
-  border: 1px solid black;
-}
-
-.date .fas {
-  padding: 14px;
-  color: white;
-  background-color: #F58220;
-  margin: 0 10px;
-}
-
-.date .fas:hover {
-  background-color: #FFA200;
-}
-
-.date .far {
-  color: black;
-  background-color: white;
-  padding: 0 0 0 10px;
-}
-
-.statistic {
-  display: flex;
-  justify-content: center;
-  margin: 20px;
-}
-
-.chart img {
-  display: block;
-  margin: 0 auto;
-  object-fit: cover;
-  max-width: 100%;
-}
-
-.chart .tableOne {
-  max-width: 90%;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-/* LINKS */
-.links {
-  border: 5px solid blue;
-}
-
-.links h2 {
-  padding: 20px;
-  border-bottom: 1px solid #000000;
-}
-
-.links .table-link {
-  display: flex;
-  justify-content: center;
-  margin: 20px;
-}
-
-.links .table-link a {
-  display: flex;
-  justify-content: center;
-  margin: 5px;
-  text-decoration: none;
-  color: #000000;
-}
-
-.links .table-link a i {
-  visibility: hidden;
-}
-
-.links .table-link a:hover {
-  color: #FFA200;
-}
-
-.links .table-link td {
-  border-bottom: 1px solid black;
-  padding: 15px 0;
-}
-
-.links .table-link tr:hover {
-  opacity: 0.5s;
-  background-color: #abdbe7;
-}
-
-.links .table-link tr:hover i {
-  visibility: visible;
-}
-
-.btn {
-  display: flex;
-  justify-content: center;
-  min-width: 160px;
-  margin: 24px auto 0 auto;
-  padding: 16px;
-  border-radius: 5px;
-  width: 150px;
-  font-size: 16px;
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-  margin: 0 auto;
-  transition: all 1s;
-}
-
-.btn-one {
-  color: white;
-  background-color: #F58220;
-}
-
-.btn-one:hover {
-  background-color: #FFA200;
-}
-
-.top-menu {
-  border: 5px solid green;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.top-menu a, .top-menu span {
-  padding: 10px;
-  color: #000000;
-}
-
-.top-menu a:hover {
-  color: #FFA200;
-  background-color: #cec8c8;
-}
-
-.name ul {
-  font-size: 20px;
-  padding-left: 5px;
-  list-style-type: none;
-  color: white;
-}
-
-.name li {
-  display: inline-block;
-  padding-right: 0px;
-  margin-right: 0px;
-  position: relative;
-}
-
-.name i {
-  padding-left: 20px;
-  display: none;
-  color: white;
-}
-
-@media (max-width: 768px) {
-  .name i {
-    display: block;
-  }
-  .name a {
-    text-decoration: none;
-  }
 }
 
 .menu ul {
@@ -595,61 +411,119 @@ template {
   margin-left: 0px;
 }
 
-/*Contact*/
-.contact {
-  border: 5px solid blue;
+.name ul {
+  font-size: 20px;
+  padding-left: 5px;
+  list-style-type: none;
+  color: white;
+}
+
+.name li {
+  display: inline-block;
+  padding-right: 0px;
+  margin-right: 0px;
+  position: relative;
+}
+
+.name li a i:hover {
+  color: #F58220;
+}
+
+.name i {
+  padding-left: 20px;
+  display: none;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .name i {
+    display: block;
+  }
+  .name a {
+    text-decoration: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-menager {
+    display: none;
+  }
+  .menu-menager.show {
+    display: block;
+  }
+}
+
+@media (max-width: 576px) {
+  .col-my {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+.content {
+  border: 5px solid black;
+  margin: 0;
+  padding: 0;
+}
+
+.post {
   padding-bottom: 20px;
 }
 
-.contact h2 {
+.post h2 {
   padding: 20px;
   border-bottom: 1px solid #000000;
 }
 
-.element {
-  display: flex;
+.post {
+  display: none;
 }
 
-.element .formularz {
+.post.active {
+  display: block;
+}
+
+.top-menu {
+  display: flex;
+  justify-content: flex-end;
+  border-bottom: 3px solid #000000;
+}
+
+.top-menu a, .top-menu span {
+  padding: 10px;
+  color: #000000;
+}
+
+.top-menu a:hover {
+  color: #FFA200;
+  background-color: #cec8c8;
+}
+
+/* Components */
+.btn {
   display: flex;
   justify-content: center;
-  flex: 2;
+  min-width: 160px;
+  margin: 24px auto 0 auto;
+  padding: 16px;
+  border-radius: 5px;
+  width: 150px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  margin: 0 auto;
+  transition: all 1s;
 }
 
-.element .formularz form {
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
+.btn-one {
+  color: white;
+  background-color: #F58220;
 }
 
-.element .formularz form .form-contact {
-  max-width: 1500px;
-  margin: 10px;
-  padding: 5px;
-}
-
-.element .formularz form .form-contact:valid {
-  background: rgba(0, 255, 0, 0.1);
-  border: 1px solid #55ee70;
-}
-
-.element .dane {
-  flex: 1;
-  margin-top: 50px;
-}
-
-input, textarea {
-  max-width: 1500px;
-  padding: 5px;
-}
-
-@media (max-width: 768px) {
-  .contact .element {
-    flex-direction: column;
-  }
-  .contact .dane {
-    text-align: center;
-  }
+.btn-one:hover {
+  background-color: #FFA200;
 }
 
 * {
@@ -735,29 +609,97 @@ input, textarea {
   align-items: center;
 }
 
-@media (max-width: 768px) {
-  .menu-menager {
-    display: none;
-  }
-  .menu-menager.show {
-    display: block;
-  }
+/* Sections */
+/* Pages / Views */
+/*General static*/
+.date {
+  display: flex;
+  justify-content: center;
+  margin: 30px;
 }
 
-@media (max-width: 576px) {
-  .col-my {
-    -ms-flex: 0 0 100%;
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
+.date p {
+  padding: 10px 20px;
+  margin: 0;
+  border: 1px solid black;
 }
 
-.post {
-  display: none;
+.date .fas {
+  padding: 14px;
+  color: white;
+  background-color: #F58220;
+  margin: 0 10px;
 }
 
-.post.active {
+.date .fas:hover {
+  background-color: #FFA200;
+}
+
+.date .far {
+  color: black;
+  background-color: white;
+  padding: 0 0 0 10px;
+}
+
+.statistic {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.chart img {
   display: block;
+  margin: 0 auto;
+  object-fit: cover;
+  max-width: 100%;
+}
+
+.chart .tableOne {
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* LINKS */
+.links h2 {
+  padding: 20px;
+  border-bottom: 1px solid #000000;
+}
+
+.links .table-link {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.links .table-link a {
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+  text-decoration: none;
+  color: #000000;
+}
+
+.links .table-link a i {
+  visibility: hidden;
+}
+
+.links .table-link a:hover {
+  color: #FFA200;
+}
+
+.links .table-link td {
+  border-bottom: 1px solid black;
+  padding: 15px 0;
+}
+
+.links .table-link tr:hover {
+  opacity: 0.5s;
+  background-color: #abdbe7;
+}
+
+.links .table-link tr:hover i {
+  visibility: visible;
 }
 
 .personalData form {
@@ -833,11 +775,54 @@ input, textarea {
 }
 
 .postback p {
-  padding: 20px;
+  padding: 40px;
 }
 
-/* Components */
-/* Sections */
-/* Pages / Views */
+/*Contact*/
+.element {
+  display: flex;
+}
+
+.element .formularz {
+  display: flex;
+  justify-content: center;
+  flex: 2;
+}
+
+.element .formularz form {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+.element .formularz form .form-contact {
+  max-width: 1500px;
+  margin: 10px;
+  padding: 5px;
+}
+
+.element .formularz form .form-contact:valid {
+  background: rgba(0, 255, 0, 0.1);
+  border: 1px solid #55ee70;
+}
+
+.element .dane {
+  flex: 1;
+  margin-top: 50px;
+}
+
+input, textarea {
+  max-width: 1500px;
+  padding: 5px;
+}
+
+@media (max-width: 768px) {
+  .contact .element {
+    flex-direction: column;
+  }
+  .contact .dane {
+    text-align: center;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
