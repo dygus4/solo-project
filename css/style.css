@@ -340,12 +340,10 @@ template {
   display: none;
 }
 
-.row {
+.cont {
   margin: 0px;
   padding: 0px;
   font-family: "Roboto Condensed", sans-serif;
-  display: flex;
-  flex-wrap: wrap;
   width: 100%;
 }
 
@@ -378,13 +376,16 @@ template {
 .sidebar {
   width: fit-content;
   background-color: #333333;
+  height: 100%;
   color: #FF0000;
   text-align: center;
+  width: 190px;
+  position: fixed;
 }
 
 .menu ul {
   list-style-type: none;
-  padding-left: 20px;
+  padding-left: 5px;
 }
 
 .menu li {
@@ -435,16 +436,33 @@ template {
   color: white;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 760px) {
+  .sidebar {
+    width: 143px;
+  }
+  .content {
+    margin-left: 143px;
+  }
+}
+
+@media (max-width: 630px) {
   .name i {
     display: block;
   }
   .name a {
     text-decoration: none;
   }
+  .sidebar {
+    position: static;
+    display: inline-block;
+    width: 100%;
+  }
+  .content {
+    margin-left: 0px;
+  }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 630px) {
   .menu-menager {
     display: none;
   }
@@ -453,18 +471,12 @@ template {
   }
 }
 
-@media (max-width: 576px) {
-  .col-my {
-    -ms-flex: 0 0 100%;
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-}
-
 .content {
   border: 5px solid black;
   margin: 0;
   padding: 0;
+  width: calc(100vh-190px);
+  margin-left: 190px;
 }
 
 .post {
@@ -482,6 +494,18 @@ template {
 
 .post.active {
   display: block;
+}
+
+@media (max-width: 760px) {
+  .content {
+    margin-left: 143px;
+  }
+}
+
+@media (max-width: 630px) {
+  .content {
+    margin-left: 0px;
+  }
 }
 
 .top-menu {
